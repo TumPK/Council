@@ -4,3 +4,4 @@ pea
 อาย
 ray
 san
+Man
