@@ -25,18 +25,19 @@ class Template extends CI_Controller {
 	public function index()
 	{
 		$this->load->model('UserLogin');
+			
+			
 			$data['query3']=$this->UserLogin->getYear();
 			$this->load->view('template/head');
-	  if(isset($_SESSION['sys_login'])&&$_SESSION['sys_login']==true){
-				$this->load->view('template/nav',$data);
-				$this->load->view('home/content',$data);
-				$this->load->view('home/sidebar');
-			}
-      else{
-      		$this->load->view('template/nav',$data);
-      		$this->load->view('home/content',$data);
+			$this->load->view('template/nav',$data);
+			$this->load->view('home/content',$data);
+			if(isset($_SESSION['sys_login'])&&$_SESSION['sys_login']==true){
+          $this->load->view('home/sidebar');
+			
+      }else{
             $this->load->view('template/sidebar');
       }
+			
 			$this->load->view('template/footer');
 			$this->load->view('template/foot');
 	}
