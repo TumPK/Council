@@ -3,6 +3,7 @@
           <li><h4>ยินดีต้อนรับ</h4>
               <ul class="blocklist">
             <?php echo "คุณ  ".$_SESSION['fname']." ".$_SESSION['lname'];?>
+			<h5><?php echo $_SESSION['name']; ?></h5>
                 </ul>
           </li>
 		  

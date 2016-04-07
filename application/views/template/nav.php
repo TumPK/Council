@@ -19,7 +19,7 @@
                 	       </ul>
                   </li>
 				  
-				  <li><a href="<?php echo site_url('template/ser'); ?>"><i class="fa fa-home"></i>ค้นหา</a></li>
+				  <li><a href="<?php echo site_url('template/ser'); ?>"><i class="fa fa-search"></i>ค้นหา</a></li>
 	     			      
             </ul>
         <div class="clear"></div>

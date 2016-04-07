@@ -6,12 +6,12 @@
         <script type="text/javascript">
           $(function () {
             var d = new Date();
-            var toDay = (d.getFullYear() + 543 + '-' + (d.getMonth() + 1) + '-' + d.getDate());
+            var toDay = (d.getDate() + '/' + (d.getMonth() + 1) + '/' + (d.getFullYear() + 543));
 
 
             // กรณีต้องการใส่ปฏิทินลงไปมากกว่า 1 อันต่อหน้า ก็ให้มาเพิ่ม Code ที่บรรทัดด้านล่างด้วยครับ (1 ชุด = 1 ปฏิทิน)
 
-            $("#datepicker-th").datepicker({ dateFormat: 'yy-mm-dd', isBuddhist: true, defaultDate: toDay, dayNames: ['อาทิตย์', 'จันทร์', 'อังคาร', 'พุธ', 'พฤหัสบดี', 'ศุกร์', 'เสาร์'],
+            $("#datepicker-th").datepicker({ dateFormat: 'dd/mm/yy', isBuddhist: true, defaultDate: toDay, dayNames: ['อาทิตย์', 'จันทร์', 'อังคาร', 'พุธ', 'พฤหัสบดี', 'ศุกร์', 'เสาร์'],
               dayNamesMin: ['อา.','จ.','อ.','พ.','พฤ.','ศ.','ส.'],
               monthNames: ['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม'],
               monthNamesShort: ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.']});
@@ -20,9 +20,9 @@
             });
 			$(function () {
             var d = new Date();
-            var toDay = (d.getFullYear() + 543 + '-' + (d.getMonth() + 1) + '-' + d.getDate());
+            var toDay = (d.getDate() + '/' + (d.getMonth() + 1) + '/' + (d.getFullYear() + 543));
 			
-			$("#datepicker-th2").datepicker({ dateFormat: 'yy-mm-dd', isBuddhist: true, defaultDate: toDay, dayNames: ['อาทิตย์', 'จันทร์', 'อังคาร', 'พุธ', 'พฤหัสบดี', 'ศุกร์', 'เสาร์'],
+			$("#datepicker-th2").datepicker({ dateFormat: 'dd/mm/yy', isBuddhist: true, defaultDate: toDay, dayNames: ['อาทิตย์', 'จันทร์', 'อังคาร', 'พุธ', 'พฤหัสบดี', 'ศุกร์', 'เสาร์'],
               dayNamesMin: ['อา.','จ.','อ.','พ.','พฤ.','ศ.','ส.'],
               monthNames: ['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม'],
               monthNamesShort: ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.']});
@@ -41,10 +41,10 @@
             ul.test {list-style:none; line-height:30px;}
         </style>   
                 <h4>รายงานการประชุมย้อนหลัง
-				<form >
-					เลือกช่วงเวลาที่ต้องการ : ตั้งแต่วันที่<input class="form-control" style = "width:20%;" placeholder="ปี-เดือน-วัน" id="datepicker-th" type="text" name="datestart">
-                    ถึงวันที่<input class="form-control" style = "width:20%;" placeholder="ปี-เดือน-วัน" id="datepicker-th2" type="text" name="datestop">
-                    <a href="<?php echo site_url(''); ?>"><input type='button' value='ค้นหา'></a>
+				<?php echo form_open('template/Show')   ?>
+					         เลือกช่วงเวลาที่ต้องการ : ตั้งแต่วันที่<input class="form-control" style = "width:20%;" placeholder="วัน/เดือน/ปี" id="datepicker-th" type="text" name="datestart">
+                    ถึงวันที่<input class="form-control" style = "width:20%;" placeholder="วัน/เดือน/ปี" id="datepicker-th2" type="text" name="datestop">
+                    <input type='submit' value='ค้นหา'>
 				</form>
   </section>
   

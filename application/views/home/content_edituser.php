@@ -1,4 +1,13 @@
 <!-- Page Content -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  
+     $("#al").click(function(){
+        alert("บันทึกเสร็จสิ้น");
+    });
+});
+</script>
     <div id="body" class="width">
 	<section id="content" class="two-column with-right-sidebar">
 	<?php foreach($query2->result() as $row) { ?>
@@ -14,13 +23,14 @@
 						หน่วยงาน : 	
 														
 														<select class="form-control" name="section_id">
+														<option value="<?php echo $row->section_id ?>"><?php echo $row->namesec ?></option>
 														<?php foreach($query->result() as $low) { ?>
 	  														<option value="<?php echo $low->section_id ?>"><?php echo $low->name ?></option>
 														<?php } ?>
 														</select>
 													
 					
-					</br> <button type="submit" class="btn btn-default">บันทึก</button>
+					</br> <button type="submit" class="btn btn-default" id="al">บันทึก</button>
 		</form>
 		
 		</section>

@@ -13,6 +13,7 @@
 							<th></th>
 							<th></th>
 						</tr>
+						
 						<?php $num=0; ?>
 				<?php foreach($query->result() as $row) { ?>	
 						
@@ -37,7 +38,7 @@
 						
 				<?php } ?>
 			</table>
-			<p align="rigth">
+			<p align="center">
 	<?php
 	if($Prev_Page)
 	{
